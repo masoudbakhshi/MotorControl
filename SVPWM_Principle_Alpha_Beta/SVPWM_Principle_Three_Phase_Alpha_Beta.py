@@ -20,8 +20,8 @@ PTS_CAR     = 200                          # samples per carrier
 FPS, SLOW   = 30, 10.0                     # 20 ms ⇒ 10 s (×500 slow-mo)
 CYC_WIN     = 2                            # 40 ms window
 R_LOAD, L_LOAD = 1.0, 10e-3                # Ω, H
-GIF_FILE, MP4_FILE = ("SVPWM_Principles_SinglePhase.gif",
-                      "SVPWM_Principles_SinglePhase.mp4")
+GIF_FILE, MP4_FILE = ("SVPWM_Principles_Three_Phase_Alpha_Beta.gif",
+                      "SVPWM_Principles_Three_Phase_Alpha_Beta.mp4")
 
 # ─── TIME GRID ──────────────────────────────────────────────────────────────
 T_CY, TCAR = 1/FREF, 1/FCAR
