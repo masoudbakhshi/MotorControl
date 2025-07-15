@@ -1,8 +1,7 @@
 # -----------------------------------------------------------------------------
 #  SVPWM_Principles_SinglePhase.py
 #
-#  αβ-driven SVPWM animation with three phase-to-star voltages, large hexagon
-#  inset, two composing vectors, and practical modulation sweep 0.5→1.15.
+#  αβ-driven SVPWM animation with three phase-to-star voltages.
 #
 #  Author : Masoud Bakhshi   • 15-Jul-2025
 # -----------------------------------------------------------------------------
