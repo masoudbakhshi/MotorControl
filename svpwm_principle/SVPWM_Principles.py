@@ -275,4 +275,4 @@ ani = animation.FuncAnimation(
 # save files
 ani.save(gif_name, writer='pillow', fps=fps, dpi=dpi_out)
 ani.save(mp4_name, writer='ffmpeg', fps=fps, dpi=dpi_out)
-print("✔ Saved", gif_name, "and", mp4_name)
+print("Saved", gif_name, "and", mp4_name)
