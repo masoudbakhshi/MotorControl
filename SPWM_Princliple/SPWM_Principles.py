@@ -2,12 +2,8 @@
 #  SPWM_Principles_SinglePhase.py
 #
 #  Slow-motion visualisation of single-phase SPWM, including the effect on an
-#  RL load.  Two fundamental cycles (40 ms) are shown for each modulation
-#  index, then the plot clears and the next amplitude is drawn.  Everything
-#  is stacked in separate sub-plots so no waveforms overlap.
-#
+#  RL load.  
 #  Written by: Masoud Bakhshi
-#  Last edit : 2025-07-14
 #
 #  Outputs:
 #      • SPWM_Principles_SinglePhase.gif
@@ -20,7 +16,7 @@ import matplotlib.animation as animation
 from matplotlib.animation import PillowWriter, FFMpegWriter
 
 # --------------------------------------------------------------------------- #
-# User-tweakable settings
+# User settings
 # --------------------------------------------------------------------------- #
 FREF          = 50.0            # Reference (fundamental) frequency [Hz]
 FCARRIER      = 1800.0          # Triangular carrier frequency   [Hz]
@@ -82,8 +78,7 @@ for k in range(1, total_pts):
     i_load[k] = i_load[k-1] + di * DT
 
 # --------------------------------------------------------------------------- #
-# Turn the long arrays into frame indices – equal wall-time per window
-# --------------------------------------------------------------------------- #
+
 frames = []
 base = 0
 for _ in M_LIST:
@@ -135,7 +130,6 @@ ln_gate,    = ax_gate.plot([], [], lw=1.5)
 ln_pole,    = ax_pole.plot([], [], lw=1.5)
 ln_cur,     = ax_cur .plot([], [], lw=1.5, color="tab:red")
 
-# Dynamic annotation for the current m
 m_text = ax_ref.text(0.99, 0.02, "", transform=ax_ref.transAxes,
                      ha="right", va="bottom", fontsize=10, weight="bold")
 
