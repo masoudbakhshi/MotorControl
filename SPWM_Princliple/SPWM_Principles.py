@@ -1,8 +1,7 @@
 # -----------------------------------------------------------------------------
 #  SPWM_Principles_SinglePhase.py
 #
-#  Slow-motion visualisation of single-phase SPWM, including the effect on an
-#  RL load.  
+#  Slow-motion visualisation of single-phase SPWM, including the effect on an RL load.  
 #  Written by: Masoud Bakhshi
 #
 #  Outputs:
