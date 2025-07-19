@@ -1,8 +1,8 @@
 """
-C-1 Decoupling d- & q-Axis Currents
+Decoupling d- & q-Axis Currents
 Author – Masoud Bakhshi · July 2025
 
-This script simulates and visualizes the effect of cross-coupling and decoupling (feedforward compensation) in the d-q current control of a Permanent Magnet Synchronous Motor (PMSM).
+This script simulates and visualizes the effect of cross-coupling and decoupling (feedforward compensation) in the d-q current control of a Permanent Magnet Synchronous Machine (PMSM).
 It uses a physically accurate PMSM model, realistic PI current controllers, and step current references. The results are animated and exported as both MP4 and GIF.
 """
 import time
@@ -118,10 +118,8 @@ plt.rcParams['xtick.labelsize'] = 8
 plt.rcParams['ytick.labelsize'] = 8
 
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12.8, 7.2), dpi=100, sharex=True)
-# Adjust top margin and suptitle position so the title is fully visible and not cut off
 fig.subplots_adjust(hspace=0.3, left=0.08, right=0.96, top=0.88, bottom=0.12)
 
-# Add a professional, descriptive title at the top of the figure
 fig.suptitle("PMSM d-q Current Control: Cross-Coupling and Decoupling Demonstration\nStep Response with and without Feedforward Compensation", fontsize=16, fontweight='bold', y=0.97)
 
 # --- Top: i_d step response ---
@@ -159,7 +157,7 @@ badge_id = ax1.text(0.98, 0.85, '', transform=ax1.transAxes, ha='right', va='cen
 badge_iq = ax2.text(0.98, 0.85, '', transform=ax2.transAxes, ha='right', va='center', fontsize=10,
                    bbox=dict(boxstyle='round,pad=0.3', fc='w', ec='k', lw=1))
 
-# --- Author Credit ---
+# --- Author---
 fig.text(0.99, 0.02, 'Masoud Bakhshi · July 2025', ha='right', va='bottom', fontsize=8, style='italic')
 
 # --- Animation Parameters ---
