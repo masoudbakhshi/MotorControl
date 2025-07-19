@@ -1,11 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-PLL‑Based Back‑EMF Observer at Low Speed
-Author: Masoud Bakhshi · July 2025
+#PLL‑Based Back‑EMF Observer at Low Speed
+#Author: Masoud Bakhshi · July 2025
 
-This script simulates a phase-locked loop (PLL) tracking the angle of a shrinking back-EMF vector, as would occur in a motor running down from 100 rpm to 0. The animation shows how the PLL phase error increases as the signal fades, and includes a lock indicator and speed panel.
-"""
+#This script simulates a phase-locked loop (PLL) tracking the angle of a shrinking back-EMF vector, as would occur in a motor running down from 100 rpm to 0. The animation shows how the PLL phase error increases as the signal fades, and includes a lock indicator and speed panel.
 
 import numpy as np
 import matplotlib.pyplot as plt
