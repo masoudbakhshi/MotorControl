@@ -5,7 +5,7 @@
 
 ## Overview
 
-This project provides a physically accurate, educational simulation of d-q axis current control in a Permanent Magnet Synchronous Motor (PMSM). The aim is to visualize the effects of cross-coupling between the d- and q-axis current loops, and to demonstrate how feedforward decoupling terms can restore near-independent control.
+This project provides a physically accurate, educational simulation of d-q axis current control in a Permanent Magnet Synchronous Machine (PMSM). The aim is to visualize the effects of cross-coupling between the d- and q-axis current loops, and to demonstrate how feedforward decoupling terms can restore near-independent control.
 
 The simulation is implemented in Python and produces animated visualizations (MP4 and GIF) of the current step responses, making it ideal for teaching, research, or professional reference.
 
