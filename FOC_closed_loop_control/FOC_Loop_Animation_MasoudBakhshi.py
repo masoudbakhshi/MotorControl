@@ -3,7 +3,7 @@ FOC_Loop_Animation_MasoudBakhshi.py
 
 Expert-level animation of the complete closed-loop Field-Oriented Control (FOC) for PMSM machines.
 - Shows signal flow from speed reference to PWM generation
-- Includes block diagram animation, dynamic plots, and interactive controls
+- Includes dynamic plots and interactive controls
 - Exports GIF and MP4 (1920x1080, 30fps, 25-30s)
 - Author: Masoud Bakhshi
 """
@@ -32,7 +32,7 @@ P = 4        # Pole pairs
 J = 0.001    # Inertia (kg*m^2)
 B = 0.0001   # Friction (N*m*s)
 
-# Controller gains (reduced for stability)
+# Controller gains
 Kp_speed = 0.1
 Ki_speed = 1.0
 Kp_id = 0.2
@@ -46,11 +46,7 @@ id_ref_default = 0.0       # A (for SPM)
 
 decoupling_enabled_default = True
 
-# === Expert Options ===
-# (No longer used as globals, now passed to simulation function)
 
-# === Placeholders for simulation data ===
-# (To be filled by simulation logic)
 time = np.linspace(0, SIM_DURATION, N_SAMPLES)
 # Reference step: 0 until t=0.2s, then omega_ref_default
 omega_ref_profile = np.zeros(N_SAMPLES)
@@ -107,7 +103,7 @@ def run_foc_simulation(USE_FEEDFORWARD=False, USE_DIST_OBS=False):
         speed_err = omega_ref - omega_m
         speed_int += speed_err / FS
         speed_int = np.clip(speed_int, -INT_LIM, INT_LIM)
-        # --- Expert: Feedforward or Disturbance Observer ---
+        # ---Feedforward or Disturbance Observer ---
         ff_torque = 0.0
         if USE_FEEDFORWARD:
             ff_torque = load_torque
@@ -211,7 +207,7 @@ def foc_simulation():
         speed_err = omega_ref - omega_m
         speed_int += speed_err / FS
         speed_int = np.clip(speed_int, -INT_LIM, INT_LIM)
-        # --- Expert: Feedforward or Disturbance Observer ---
+        # --- Feedforward or Disturbance Observer ---
         ff_torque = 0.0
         # Default: use feedforward for animation
         ff_torque = load_torque
@@ -295,9 +291,7 @@ def foc_simulation():
 
 # === Animation Setup ===
 def setup_block_diagram(ax):
-    """This function does not draw anything. The author and title are added outside the plot area."""
     ax.axis('off')
-    # Nothing is drawn here
 
 # --- Animation update function ---
 def update_animation(frame):
