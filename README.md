@@ -46,4 +46,4 @@ MotorControl/
 │   ├── svpwm.py
 │   ├── clarke_park.py
 │   └── pi_controller.py
-└── LICENSE (optional)
+└── LICENSE 
