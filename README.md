@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="motorcontrol_banner_masoud.png" alt="MotorControl Banner by Masoud Bakhshi" width="100%">
+</p>
+
 # 🌀 MotorControl
 
 A curated collection of real-world motor control strategies and implementations developed by **Masoud Bakhshi**, Control Software Specialist at Volvo Trucks.
