@@ -1,8 +1,8 @@
 """
-Current Controller Design Wizard (dq current PI).
+Current Controller Design and calibration Wizard (dq current PI controllers).
 Author: Masoud Bakhshi
 
-Added (industrial extras):
+Added:
 A) Robustness sweep (Monte Carlo) over Rs, Ld/Lq, total delay Td
 B) Voltage saturation + anti-windup time-domain check (limit-cycle/ripple risk indicator)
 
@@ -197,7 +197,7 @@ def bandwidth_pi_gains(R: float, L: float, fc_hz: float) -> Tuple[float, float]:
 
 
 # ============================================================
-# Helpers (time-domain saturation + AW) — FIXED
+# Helpers (time-domain saturation + AW) 
 # ============================================================
 
 @dataclass
@@ -268,7 +268,7 @@ def simulate_current_loop_rl(
          v_cmd = Kp*e + xI
       Saturation: v_sat = clip(v_cmd, ±Vmax)
 
-    Delay model (FIXED):
+    Delay model:
       Uses fractional-sample delay (linear interpolation) with selectable placement:
         measurement / actuation / split
       Total delay Td is applied accordingly.
@@ -920,7 +920,7 @@ def page_saturation_aw_check():
     plant: PlantConfig = st.session_state.plant
     g = st.session_state.get("gains", {})
 
-    st.markdown("### 9) Saturation & Anti-Windup Check (time-domain) — FIXED (fractional delay + true integrator)")
+    st.markdown("### 9) Saturation & Anti-Windup Check (time-domain) — (fractional delay + true integrator)")
 
     if not g:
         st.warning("No tuned gains found yet. Go to **Tuning (Preview)** first.")
