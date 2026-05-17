@@ -631,7 +631,7 @@ def page_tuning():
     plant: PlantConfig = st.session_state.plant
     tune: TuningConfig = st.session_state.tune
 
-    st.markdown("### 5) Tuning (Preview) — Delay-aware bandwidth PI")
+    st.markdown("### 5) Tuning (Preview): Delay-aware bandwidth PI")
 
     c1, c2, c3 = st.columns([2.0, 2.0, 1.2])
     with c1:
@@ -703,7 +703,7 @@ def page_stability():
     with c4:
         Ki_q = st.number_input("Ki_q", value=Ki_q0, step=0.1, format="%.6f")
 
-    st.markdown("#### Discrete incremental PI coefficients — Tustin (bilinear)")
+    st.markdown("#### Discrete incremental PI coefficients: Tustin (bilinear)")
     coeff_d = tustin_incremental_pi_coeffs(Kp_d, Ki_d, proj.Ts_s)
     coeff_q = tustin_incremental_pi_coeffs(Kp_q, Ki_q, proj.Ts_s)
     c5, c6 = st.columns(2)
@@ -795,7 +795,7 @@ def page_robustness_monte_carlo():
     proj: ProjectConfig = st.session_state.proj
     plant: PlantConfig = st.session_state.plant
 
-    st.markdown("### 8) Robustness Sweep — Monte Carlo (Rs, L, Td)")
+    st.markdown("### 8) Robustness Sweep: Monte Carlo (Rs, L, Td)")
 
     g = st.session_state.get("gains", {})
     if not g:
@@ -920,7 +920,7 @@ def page_saturation_aw_check():
     plant: PlantConfig = st.session_state.plant
     g = st.session_state.get("gains", {})
 
-    st.markdown("### 9) Saturation & Anti-Windup Check (time-domain) — (fractional delay + true integrator)")
+    st.markdown("### 9) Saturation & Anti-Windup Check (time-domain): (fractional delay + true integrator)")
 
     if not g:
         st.warning("No tuned gains found yet. Go to **Tuning (Preview)** first.")
