@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="motorcontrol_banner_masoud.png" alt="MotorControl Banner by Masoud Bakhshi" width="100%">
+  <img src="motorcontrol_banner_masoud.png" alt="MotorControl_Simulation Banner by Masoud Bakhshi" width="100%">
 </p>
 
-# 🌀 MotorControl
+# 🌀 MotorControl_Simulation
 
 A curated collection of real-world motor control strategies and implementations developed by **Masoud Bakhshi**, Control Software Specialist at Volvo Trucks.
 
@@ -35,7 +35,7 @@ This repository consolidates control logic, simulation models, and experimental 
 ## 📂 Repository Structure
 
 ```text
-MotorControl/
+MotorControl_Simulation/
 ├── README.md
 ├── docs/
 │   ├── dq_controller_structure.png
